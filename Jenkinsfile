@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Run Python Script') {
             steps {
-                bat 'python index.py'
+                bat 'python --version'   // ✅ prints Python version first
+                bat 'python index.py'    // ✅ runs your script
             }
         }
     }

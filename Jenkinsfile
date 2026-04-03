@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Run Python Script') {
             steps {
-                sh 'python3 index.py'
+                bat 'python index.py'
             }
         }
     }

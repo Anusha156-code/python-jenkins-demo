@@ -12,5 +12,15 @@ pipeline {
                 bat 'python index.py'    // ✅ runs your script
             }
         }
+        stage('Run Tests') {
+            steps {
+                bat 'pytest'
+            }
+        }
+        stage('Lint') {
+            steps {
+                bat 'flake8 .'
+            }
+        }        
     }
 }
